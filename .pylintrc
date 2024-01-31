@@ -1,0 +1,6 @@
+[MASTER]
+disable=
+    C0114, # missing-module-docstring
+    C0116, # Missing function or method docstring
+    W0105, # pointless-string-statement
+    C0115, # too-few-public-methods

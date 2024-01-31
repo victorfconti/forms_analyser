@@ -14,9 +14,9 @@ credentials = service_account.Credentials.from_service_account_info(raw_credenti
 
 def get_book_form_answer():
     form_service = discovery.build('forms', 'v1', credentials=credentials)
-    return form_service.forms().responses().list(formId=FORM_ID).execute()
+    return form_service.forms().responses().list(formId=FORM_ID).execute()  # pylint: disable=maybe-no-member
 
 
 def get_book_form():
     form_service = discovery.build('forms', 'v1', credentials=credentials)
-    return form_service.forms().get(formId=FORM_ID).execute()
+    return form_service.forms().get(formId=FORM_ID).execute()  # pylint: disable=maybe-no-member
