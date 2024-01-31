@@ -47,12 +47,10 @@ class FormsService:
         answer: str = FormsService.__extract_single_answer(response, response_id)
         if answer == "":
             return 0
-        else:
-            return int(answer)
+        return int(answer)
 
     @staticmethod
     def __extract_single_answer(response: dict[str, any], response_id: str) -> str:
         if response_id in response['answers']:
             return response['answers'][response_id]['textAnswers']['answers'][0]['value']
-        else:
-            return ""
+        return ""
